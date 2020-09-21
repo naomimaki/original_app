@@ -7,13 +7,13 @@
     <div class = "greeting">
     ご挨拶
     </div>
+    <%= link_to 'お店の情報を編集する', new_post_path ,class:"post-btn"%>
   </div>
 <% else %>
   <h1>お店の名前へようこそ！</h1>
   <div class = "shop_greeting">
     <div class = "syacyo-image">
     <%= image_tag('shef-image.png' , size: '100x100') %>
-    
     </div>
     <div class = "greeting">
     お店の紹介や新人さんへのメッセージをご記入ください！

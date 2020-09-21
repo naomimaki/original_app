@@ -1,15 +1,16 @@
 <h1>お店の情報を入力してください</h1>
 
 <%= form_with model: @post, url: posts_path, local: true do |f| %>
-  <p>お店の名前</p>
-  <%= f.text_field :shop_name, placeholder: "例）so-ra.cafe" %>
-  <p>代表者氏名</p>
-  <%= f.text_field :name, placeholder: "例）大谷　美子" %>
-  <p><span class="image-file">代表者画像</span></p>
-  <%= f.file_field :image, class: 'hidden' %>
-  <p>代表者よりメッセージ</p>
-  <%= f.text_area :greeting, placeholder: "例）新人さんへのメッセージを・・・！", rows: "10" %>
-  <%= f.submit '投稿する' %>
+  <%= render 'shared/error_messages', model: f.object %>
+    <p>お店の名前</p>
+    <%= f.text_field :shop_name, placeholder: "例）so-ra.cafe" %>
+    <p>代表者氏名</p>
+    <%= f.text_field :name, placeholder: "例）大谷　美子" %>
+    <p><span class="image-file">代表者画像</span></p>
+    <%= f.file_field :image, class: 'hidden' %>
+    <p>代表者よりメッセージ</p>
+    <%= f.text_area :greeting, placeholder: "例）新人さんへのメッセージを・・・！", rows: "10" %>
+    <%= f.submit '投稿する' %>
 <% end %>
 
 <p><%= link_to 'トップページに戻る', posts_path %></p>
