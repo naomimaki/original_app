@@ -1,0 +1,22 @@
+<% @shares.each do |share| %>
+    <div class="share_post" >
+      <span class ="share_date">
+        <p><%= share.date %></p>
+      </span>
+      <span class ="share_name">
+        <p><%= share.name %></p>
+      </span>
+      <span class="share_explanation">
+        <p><%= share.explanation %></p>
+      </span>
+    </div>
+  <% end %>
+
+<%= form_with model: @share, url: shares_path, local: true do |f| %>
+  <%= f.text_field :date, placeholder: "例）2023/3/4" %>
+  <%= f.text_field :name, placeholder: "例）なお" %>
+  <%= f.text_area :explanation, placeholder: "例）田中さん久々来店！髪型かわってたので次回来たときに是非つっこんであげてくださいー", rows: "10" %>
+  <%= f.submit '投稿する' %>
+<% end %>
+
+<p><%= link_to 'トップページに戻る', posts_path %></p>

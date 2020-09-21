@@ -1,0 +1,12 @@
+<h1>新規マニュアル登録画面</h1>
+
+<%= form_with model: @manual, url: manuals_path, local: true do |f| %>
+  <%= f.text_field :title, placeholder: "例）ランチの盛付け" %>
+  <span class="image-file">画像</span>
+  <%= f.file_field :image, class: 'hidden' %>
+  <%= f.text_area :explanation, placeholder: "例）葉っぱは30g,トッピングは３種類", rows: "10" %>
+  <%= f.submit '投稿する' %>
+<% end %>
+
+<p><%= link_to 'マニュアル一覧に戻る',manuals_path %></P>
+<p><%= link_to 'トップページに戻る', posts_path %></p>
