@@ -4,3 +4,5 @@ Rails.application.routes.draw do
   resources :posts, :manuals, :shifts, :shares
   resources :welcome, only: :index
 end
+
+# No route matches [DELETE] "/"

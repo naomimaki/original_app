@@ -26,11 +26,12 @@
 <%= link_to '1.業務マニュアル', manuals_path %></div>
 
 <div class ="shift">
-<%= link_to '2.シフト確認', shifts_path%></div>
+<%= link_to '2.シフト確認', shifts_path %></div>
 
 <div class ="share">
-<%= link_to '3.引き継ぎ事項', shares_path%></div>
+<%= link_to '3.引き継ぎ事項', shares_path %></div>
 
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 <%# .item-red-btn {
   text-align: center;
   background-color: #ea352d;
@@ -39,7 +40,7 @@
   color: #FFF;
   margin: 20px 0px;
   padding: 2vh 10vw;これでいい感じにボタンを作ろう。
-} %>
+} btn のCSSも準備必要%>
 
 
 <%# <span class ="manual_image">

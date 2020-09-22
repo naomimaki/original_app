@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :shopname, presence: true
   has_one :post
   has_many :manuals
+  has_many :shares
 end

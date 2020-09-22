@@ -4,6 +4,7 @@ class CreateShares < ActiveRecord::Migration[6.0]
       t.string :date
       t.string :name
       t.text :explanation
+      t.integer :user_id, null: false, foreign_key: true
       t.timestamps
     end
   end

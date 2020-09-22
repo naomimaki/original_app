@@ -1,9 +1,7 @@
 class Post < ApplicationRecord
   has_one_attached :image
 
-  has_many :manuals
-  belongs_to :users
-  has_many :shares
+  belongs_to :user
 
-  validates :shop_name, :name, :greeting, :image, presence: true
+  validates  :name, :greeting, :image, presence: true
 end
