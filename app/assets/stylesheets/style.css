@@ -1,0 +1,74 @@
+header {
+  display:block;
+  height:100px;
+  width: 100%;
+  background-color:lightcyan;
+} 
+
+.header__bar {
+  display:flex;
+}
+
+footer{
+  background-color: lightgray;
+  height: 100px;
+  width: 100%;
+ }
+
+/* footer::before{
+  display:block;
+  height:100px;
+  width: 100%;
+  content: '';
+  background-image: url("https://cdn.pixabay.com/photo/2016/07/05/16/53/leaf-1498985_1280.jpg");/*背景画像のURL*/
+  opacity: 0.8;/*半透明カラーの透明度*/
+  filter: blur(8px);/*ぼかし度*/
+  position: absolute;
+  bottom: 0;
+} */ */
+.grid-6 {
+  text-decoration: none;
+  font-size :20px
+}
+
+
+/* share#indexのCSS設定 */
+input[type="text"]{
+  width: 300px;
+  height: 40px;
+}
+
+input[type="textarea"]{
+  width: 300px;
+  height: 200px;
+}
+
+h1 {
+  font-size: 30px;
+  color: rgb(21, 17, 143);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  text-align: center;
+}
+
+.post_btn {
+  border: 1px solid white;
+  padding: 10px;
+  margin: auto;
+  width: 50px;
+  height:30px;
+  color: white;
+  text-decoration-line: none;
+  background-color: teal;
+}
+
+html {
+  background-image: url("https://beiz.jp/images_T/tree-woods/tree-woods_00001.jpg");/* 両端部分に付ける背景画像 */
+}
+body {
+  margin: 0px 10%;  /* 外側の余白を、上下はゼロで左右は画面横幅の15％に */
+  padding: 15px;     /* 内側の余白を消す */
+  background-color: white;  /* 本文部分の背景色は白色 */
+}

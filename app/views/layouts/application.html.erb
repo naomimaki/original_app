@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OriginalApp</title>
+    <title>まにゅなび</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,22 @@
   </head>
 
   <body>
+  <header class="header">
+      <div class="header__bar">
+        <div class="grid-6"><a href="/">まにゅなび</a></div>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <span><%= current_user.email %>
+          </div>
+          <% else %>
+          <div class="grid-6">
+            
+         </div>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>

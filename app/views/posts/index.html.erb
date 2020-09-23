@@ -1,5 +1,5 @@
-<h1><%= current_user.shopname %>へようこそ！</h1>
-<% unless @post.present? %>
+<p><h1><%= current_user.shopname %>へようこそ！</h1></p>
+<% if @posts.present? %>
   <% @posts.each do |post| %>
       <div class="post_name" >
         <span class ="post_name">
@@ -26,14 +26,12 @@
 <% end %>
 
 
-<div class ="manual">
-<%= link_to '1.業務マニュアル', manuals_path %></div>
 
-<div class ="shift">
-<%= link_to '2.シフト確認', shifts_path %></div>
+<p><%= link_to '1.業務マニュアル ', manuals_path, class:"post_btn"  %></p>
 
-<div class ="share">
-<%= link_to '3.引き継ぎ事項', shares_path %></div>
+<p><%= link_to '2.シフト確認    ', shifts_path, class:"post_btn"  %></p>
+
+<p><%= link_to '3.引き継ぎ事項   ', shares_path, class:"post_btn" %></p>
 
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 <%# .item-red-btn {
@@ -49,4 +47,4 @@
 
 <%# <span class ="manual_image">
         <p><%= image_tag manual.image.variant(resize:'500x500') %></p>
-      <%# </span> %> %>
+      <%# </span> %> 
