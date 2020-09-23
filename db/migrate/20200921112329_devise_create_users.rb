@@ -7,10 +7,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.text :shopname,             null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-
-      t.integer :share_id, null: false, foreign_key: true
-      t.integer :post_id, null: false, foreign_key: true
-      t.integer :manual_id, null: false, foreign_key: true
+      # ちょっと考える。。。。。
+      t.integer :share_id, null: false, foreign_key: true, default: "0"
+      t.integer :post_id, null: false, foreign_key: true, default: "0"
+      t.integer :manual_id, null: false, foreign_key: true, default: "0"
 
       ## Recoverable
       t.string   :reset_password_token

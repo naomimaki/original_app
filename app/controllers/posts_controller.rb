@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit( :name, :greeting, :image)
+    params.require(:post).permit( :name, :greeting, :image).merge(user_id: current_user.id)
   end
   # イメージをストロングパラメーターに設定
 end
