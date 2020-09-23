@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    # ここ考えよう。。。
+    @posts = Post.includes(:user)
   end
 
   def new
