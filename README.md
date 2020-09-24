@@ -46,10 +46,8 @@
   ユーザー登録をすることで関係者以外は閲覧ができなくなっています。
   シンプルなユーザーフェースで簡単に利用ができます。
 
-
-
-
-* Ruby 2.6.5
+## 利用環境
+  Ruby 2.6.5
 
 ## データベース設計
   ER図：file:///Users/naomimaki/Library/Mobile%20Documents/com~apple~CloudDocs/%E3%81%BE%E3%81%AB%E3%82%85%E3%81%AA%E3%81%B2%E3%82%99ER%E5%9B%B3.drawio
