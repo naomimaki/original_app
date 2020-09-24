@@ -1,4 +1,4 @@
-<p><h1><%= current_user.shopname %>へようこそ！</h1></p>
+<p><div class= "top_message"><%= current_user.shopname %></div></p>
 <% if @posts.present? %>
   <% @posts.each do |post| %>
       <div class="post_name" >
@@ -33,7 +33,7 @@
 
 <p><%= link_to '3.引き継ぎ事項   ', shares_path, class:"post_btn" %></p>
 
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
 <%# .item-red-btn {
   text-align: center;
   background-color: #ea352d;

@@ -1,4 +1,4 @@
-<h1>マニュアル一覧</h1>
+<p><div class= "top_message">マニュアル一覧</p></div>
 <div class = "contents">
  <% @manuals.each do |manual| %>
     <div class="manual_post" >
@@ -14,7 +14,7 @@
     </div>
   <% end %>
 
-  <%= link_to 'マニュアルを追加する', new_manual_path %>
+  <p><%= link_to 'マニュアルを追加する', new_manual_path %></p>
 </div>
 
 <p><%= link_to 'トップページに戻る', posts_path %></p>

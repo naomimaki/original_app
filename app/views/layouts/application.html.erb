@@ -12,7 +12,7 @@
   <body>
   <header class="header">
       <div class="header__bar">
-        <div class="grid-6"><a href="/">まにゅなび</a></div>
+        <div class="grid-6"><%= link_to image_tag("rogo.png", class:"rogo"), "/" %></div>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <span><%= current_user.email %>

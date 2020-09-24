@@ -1,4 +1,4 @@
-<h1>引き継ぎ事項</h1>
+<p><div class= "top_message">引き継ぎ事項</p></div>
 <% @shares.each do |share| %>
     <div class="share_post" >
       <span class ="share_date">
@@ -13,13 +13,13 @@
     </div>
   <% end %>
 
-<div class ="share_comment">
+<p><div class ="share_comment">
   <%= form_with model: @share, url: shares_path, local: true do |f| %>
-    <%= f.text_field :date, placeholder: "例）2023/3/4" %>
-    <%= f.text_field :name, placeholder: "例）なお" %>
-    <%= f.text_area :explanation, placeholder: "例）田中さん久々来店！髪型かわってたので次回来たときに是非つっこんであげてくださいー", rows: "10" %>
-    <%= f.submit '投稿する' %>
+    <div class = "share_date" ><%= f.text_field :date, placeholder: "例）2023/3/4" %></div>
+    <div class = "share_name" ><%= f.text_field :name, placeholder: "例）吉田" %></div>
+    <div class = "share_explanation" > <%= f.text_area :explanation, placeholder: "例）田中さんきましたよ！新メニューお気に入りのようです！", rows: "10" %></div>
+    <p><div class = "btn" ><%= f.submit '投稿する' %></div></p>
   <% end %>
-</div>
+</div></p>
 
 <p><%= link_to 'トップページに戻る', posts_path %></p>

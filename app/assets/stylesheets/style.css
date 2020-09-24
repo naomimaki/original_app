@@ -2,7 +2,6 @@ header {
   display:block;
   height:100px;
   width: 100%;
-  background-color:lightcyan;
 } 
 
 .header__bar {
@@ -10,7 +9,6 @@ header {
 }
 
 footer{
-  background-color: lightgray;
   height: 100px;
   width: 100%;
  }
@@ -34,8 +32,6 @@ footer{
 
 /* share#indexのCSS設定 */
 input[type="text"]{
-  width: 300px;
-  height: 40px;
 }
 
 input[type="textarea"]{
@@ -66,9 +62,28 @@ p {
 
 html {
   background-image: url("https://beiz.jp/images_T/tree-woods/tree-woods_00001.jpg");/* 両端部分に付ける背景画像 */
+  margin: 0px;
 }
 body {
   margin: 0px 10%;  /* 外側の余白を、上下はゼロで左右は画面横幅の15％に */
   padding: 15px;     /* 内側の余白を消す */
   background-color: white;  /* 本文部分の背景色は白色 */
+}
+
+ .share_comment { 
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+.share_post {
+  border: 20px solid white;
+  background-color: lightgoldenrodyellow;
+}
+
+.top_message {
+  font-size: 30px;
+  font-weight: bold;
+  color: darkblue;
+  text-align: center;
 }
